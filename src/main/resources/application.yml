@@ -1,12 +1,19 @@
-person:
-  name: 张三
-  age: 18
-  birth: 2018/09/20
-  boss: true
-  maps: {k1: Tom,k2: Jack}  #对象和Map的写法一样的
-  dogs:
-    - firstName: 灰灰
-      age: 2
-    - firstName: 毛毛
-      age: 3
+server:
+  port: 8000
 
+spring:
+  profiles:
+    active: prod
+
+---
+
+server:
+  port: 8001
+
+spring:
+  profiles: dev
+---
+server:
+  port: 9000
+spring:
+  profiles: prod

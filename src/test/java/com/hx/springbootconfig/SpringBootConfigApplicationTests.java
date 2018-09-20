@@ -20,6 +20,16 @@ public class SpringBootConfigApplicationTests {
     @Autowired
     private ApplicationContext Ioc;
 
+
+
+    @Test
+    public void testHelloService(){
+
+        boolean b = Ioc.containsBean("helloService");
+        System.out.println(b);
+    }
+
+
     @Test
     public void contextLoads() {
         Object person = Ioc.getBean("person");
